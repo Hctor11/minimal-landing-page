@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;600;700&display=swap')
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: 'Roboto Mono', monospace
+
+#overlay-light
+    position: absolute
+    width: 100vw
+    height: 100vh
+    background: #fff
+    z-index: 1
+
+
+#overlay-dark
+    position: absolute
+    width: 100vw
+    height: 100vh
+    background: #fff
+    z-index: 2
+    mix-blend-mode: multiply
+
+
+
+.content
+    width: 100%
+    height: 100%
+    padding: 1em 0
+    font-weight: 100
+
+.content > *
+    position: relative
+    z-index: 3
+    mix-blend-mode: difference
+    color: #fff
+
+.marquee
+    position: absolute
+    bottom: 10%
+    width: 100%
+    padding-top: 4em
+    margin: 0 auto
+    white-space: nowrap
+    overflow: hidden
+    z-index: 5
+
+.marquee span
+    font-weight: 400
+    letter-spacing: -10%
+    color: #000
+    mix-blend-mode: normal !important
+    font-size: 12em
+    text-transform: uppercase
+    display: inline-block
+    padding-left: -10%
+    animation: marquee-animation 100s linear infinite
+
+@keyframes marquee-animation
+    0%
+        transform: translate(0,0)
+
+    100%
+        transform: translate(-100%, 0)
+
+
+img
+    position: relative
+    top: 40px
+    width: 200px
+
+.divider
+    width: 100%
+    height: 1px
+    background: #fff
+    margin: 0.2em 0
+
+.nav
+    text-transform: uppercase
+
+.nav-divider
+    margin-top: 1em
+
+.row
+    width: 100%
+    height: 20px
+    display: flex
+    padding: 0 2em
+    font-weight: lighter
+
+.row > .col
+    position: relative
+    flex: 1
+
+.row > .col:first-child
+    flex: 2

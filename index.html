@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./sass/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 </head>
 <body>
     <div id="overlay-light">
-        <div class="marco">
-            <span>Try new ideas, Try new dimensions <img src="/public/Star.png" alt="star"> Try new ideas, Try new dimensions <img src="/public/Star.png" alt="star"> Try new ideas, Try new dimensions <img src="/public/Star.png" alt="star"> Try new ideas, Try new dimensions <img src="/public/Star.png" alt="star"> Try new ideas, Try new dimensions <img src="/public/Star.png" alt="star"> </span>
+        <div class="marquee">
+            <span>Try new ideas, Try new dimensions <img class="img" src="/public/Star.png" alt="star"> Try new ideas, Try new dimensions <img class="img" src="/public/Star.png" alt="star"> Try new ideas, Try new dimensions <img class="img" src="/public/Star.png" alt="star"> Try new ideas, Try new dimensions <img class="img" src="/public/Star.png" alt="star"> Try new ideas, Try new dimensions <img class="img" src="/public/Star.png" alt="star"> </span>
         </div>
     </div>
     <div id="overlay-dark">
@@ -79,7 +79,89 @@
                 <div class="col">Sports</div>
                 <div class="col">Hector Rivera</div>
             </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col">Developers && designers</div>
+                <div class="col">+222 222 222</div>
+                <div class="col">Art direction</div>
+                <div class="col">Sports</div>
+                <div class="col">Hector Rivera</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col">Developers && designers</div>
+                <div class="col">+222 222 222</div>
+                <div class="col">Art direction</div>
+                <div class="col">Sports</div>
+                <div class="col">Hector Rivera</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col">Developers && designers</div>
+                <div class="col">+222 222 222</div>
+                <div class="col">Art direction</div>
+                <div class="col">Sports</div>
+                <div class="col">Hector Rivera</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col">Developers && designers</div>
+                <div class="col">+222 222 222</div>
+                <div class="col">Art direction</div>
+                <div class="col">Sports</div>
+                <div class="col">Hector Rivera</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col">Developers && designers</div>
+                <div class="col">+222 222 222</div>
+                <div class="col">Art direction</div>
+                <div class="col">Sports</div>
+                <div class="col">Hector Rivera</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col">Developers && designers</div>
+                <div class="col">+222 222 222</div>
+                <div class="col">Art direction</div>
+                <div class="col">Sports</div>
+                <div class="col">Hector Rivera</div>
+            </div>
         </div>
     </div>
+    <script>
+        gsap.to("#overlay-dark",2,{
+            ease: "power3.inOut",
+            delay: 4,
+
+        })
+
+        gsap.from(".divider",3,{
+            scaleX: 0,
+            ease: "power3.inOut",
+            delay: 1,
+            stagger: {
+                amount: 1,
+
+            }
+        })
+
+        gsap.from(".row > .col",2,{
+            opacity: 0,
+            y: 40,
+            ease: "power3.inOut",
+            delay: 2,
+            stagger: {
+                amount: 1.5
+            }
+        })
+
+        gsap.from(".marquee",1,{
+            bottom: "-5%",
+            opacity: 0,
+            ease: "power3.inOut",
+            delay: 4.5
+        })
+    </script>
 </body>
 </html>
