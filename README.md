@@ -5,5 +5,5 @@ Description: This is a minimalist landing page project that focuses on simplicit
 Technologies Used:
 
 - HTML
-- CSS
+- Sass
 - JavaScript
